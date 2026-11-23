@@ -1,0 +1,41 @@
+What Belongs in this folder..
+
+• (Data Definition Language - DDL). Store your CREATE SCHEMA, CREATE TABLE, PRIMARY KEY, 
+and FOREIGN KEY scripts here 
+(for example, 01_create_tables.sql). 
+Because SSMS Database Diagrams are stored internally inside the SQL Server database (sysdiagrams table)
+rather than as standalone Git-friendly files, 
+saving the underlying .sql creation scripts in this folder ensures your schema is backed up in your repository.
+
+- blueprint for how all the tables (data) are orangised and related to each other (rarely changes)
+- defines...
+    - tables (entities) >> what tables exist
+    - cols (attributes) >> what data the tables holds
+    - dtypes
+    - r/s (links) >> pri & for key, 1-1,1-n,m-n
+    - rules & constraints >> to keep data clean and accurate (e.g. price cannot be neg)
+
+DBO (Database owner)
+- default schema (when a table is being created without specifying a custom schema)
+
+
+(how do i design a schema?)
+(what is a common practice when data engineering with sql server?)
+- create database
+- setup schema (to see how all the data link tgt)
+- erd essentially (pri key for key)
+- start querying (creating new metrics etc.)
+- save the new table
+
+
+database relationship (1-n)
+- tables
+    - dim_awards
+    - fact_transactions
+one award has many transactions
+
+
+
+
+
+
